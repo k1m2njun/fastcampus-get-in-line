@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/admin") // admin 기본 도메인
+@RequestMapping("/admin") // admin 기본 도메인, 우선 매핑 됨.
 @Controller
 public class AdminController {
 
@@ -14,7 +14,7 @@ public class AdminController {
         return "admin/places";
     }
 
-    @GetMapping("/places/{placeId}")
+    @GetMapping("/places/{placeId}") // 경로 상의 일부분을 변수로 인식함
     public String adminPlaceDetail(@PathVariable Integer placeId) {
         return "admin/place-detail";
     }
