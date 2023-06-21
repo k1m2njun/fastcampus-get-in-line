@@ -1,6 +1,5 @@
 package com.k1m2njun.getinline.dto;
 
-import com.k1m2njun.getinline.constant.ErrorCode;
 import lombok.*;
 
 // DTO - 데이터 전달용 객체
@@ -19,6 +18,4 @@ public class APIDataResponse extends com.k1m2njun.getinline.dto.APIErrorResponse
     public static APIDataResponse of(boolean success, Integer errorCode, String message, Object data) {
         return new APIDataResponse(success, errorCode, message, data);
     }
-
-
 }

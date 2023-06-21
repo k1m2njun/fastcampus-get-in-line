@@ -7,7 +7,8 @@ import lombok.*;
 @ToString
 @EqualsAndHashCode
 @RequiredArgsConstructor(access = AccessLevel.PROTECTED)
-public class APIErrorResponse {
+public class APIErrorResponse { // 에러 응답. (성공여부, 에러코드, 메시지)
+
     private final Boolean success;
     private final Integer errorCode;
     private final String message;
